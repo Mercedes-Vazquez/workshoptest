@@ -7,9 +7,51 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Technical requirements
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+We are going to use Laravel, Livewire, Breeze, Alpine, sqlite, Tailwind.
+
+## Create your Laravel app
+
+Use these commands to create your project locally: 
+composer create-project laravel/laravel example-app
+cd example-app 
+
+If you want to work remote create a repository on github. Once you have created one go to the option "or push an existing repository from the command line" and use the following commands:
+git remote add origin https://github.com/user_identity/repository_name.git
+git branch -M main
+git push -u origin main
+
+Go to .env file and modify:
+APP_NAME= (it comes with Laravel by default)
+DB_CONNECTION= squlite
+APP_URL=http://127.0.0.1:8000
+Comment these lines:
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=
+Inside the database folder create a new file named: database.sqlite
+
+To install Livewire you need to have:
+PHP 7.2.5 or higher
+Laravel 7.0 or higher
+Use the following command:
+composer require livewire/livewire
+
+To install Breeze use the following command:
+composer require laravel/breeze --dev
+
+Create model, factory, controller using the following command:
+
+php artisan make:model name -mfc
+
+
+
+
+
+web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
